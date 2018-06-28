@@ -20,8 +20,14 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // Selecting first Tab by default
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSUInteger selectedTabIndex = [defaults integerForKey:kSelectedTabDefaultsKey];
+    UITabBarItem *selectedItem = [self.heroTabBar.items objectAtIndex:selectedTabIndex];
+    self.heroTabBar.selectedItem = selectedItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,4 +104,13 @@
 - (IBAction)addHero:(UIBarButtonItem *)sender {
     
 }
+
+#pragma mark - UITabBarDelegate Methods
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSUInteger tabIndex = [tabBar.items indexOfObject:item];
+    [defaults setInteger:tabIndex forKey:kSelectedTabDefaultsKey];
+}
+
 @end

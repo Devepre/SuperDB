@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HeroListController : UIViewController <UITableViewDataSource, UITabBarDelegate>
+static NSString *kSelectedTabDefaultsKey = @"Selected Tab";
+
+typedef NS_ENUM(NSUInteger, SortingType) {
+    kByName,
+    kBySecretIdentity,
+};
+
+@interface HeroListController : UIViewController <UITableViewDataSource, UITabBarDelegate, UITabBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *heroTableView;
 @property (weak, nonatomic) IBOutlet UITabBar *heroTabBar;

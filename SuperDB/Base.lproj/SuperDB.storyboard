@@ -42,6 +42,9 @@
                                     <tabBarItem title="By Name" image="name_icon" id="MCc-g3-IeP"/>
                                     <tabBarItem title="By Secred Identity" image="secret_icon" id="PEg-nW-BWU"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="oWO-Kd-3V6" id="Oao-Nz-jC8"/>
+                                </connections>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1gY-wc-Y6L">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
