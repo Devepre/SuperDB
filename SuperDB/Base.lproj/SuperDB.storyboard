@@ -93,6 +93,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="3j4-bS-0qK" id="gp4-88-1q2"/>
                         <outlet property="heroTabBar" destination="auC-8b-jRT" id="3AG-S7-1D3"/>
                         <outlet property="heroTableView" destination="1gY-wc-Y6L" id="fcc-6G-ksh"/>
                     </connections>
