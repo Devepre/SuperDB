@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24233DA720E54B6300618DEE /* HeroListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24233DA620E54B6300618DEE /* HeroListController.m */; };
 		24B18D6620E5460900ADCDB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B18D6520E5460900ADCDB9 /* AppDelegate.m */; };
 		24B18D6920E5460900ADCDB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B18D6820E5460900ADCDB9 /* ViewController.m */; };
-		24B18D6C20E5460900ADCDB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B18D6A20E5460900ADCDB9 /* Main.storyboard */; };
+		24B18D6C20E5460900ADCDB9 /* SuperDB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B18D6A20E5460900ADCDB9 /* SuperDB.storyboard */; };
 		24B18D6F20E5460900ADCDB9 /* SuperDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24B18D6D20E5460900ADCDB9 /* SuperDB.xcdatamodeld */; };
 		24B18D7120E5460A00ADCDB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24B18D7020E5460A00ADCDB9 /* Assets.xcassets */; };
 		24B18D7420E5460A00ADCDB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B18D7220E5460A00ADCDB9 /* LaunchScreen.storyboard */; };
@@ -17,12 +18,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24233DA520E54B6300618DEE /* HeroListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroListController.h; sourceTree = "<group>"; };
+		24233DA620E54B6300618DEE /* HeroListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroListController.m; sourceTree = "<group>"; };
 		24B18D6120E5460900ADCDB9 /* SuperDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B18D6420E5460900ADCDB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		24B18D6520E5460900ADCDB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		24B18D6720E5460900ADCDB9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		24B18D6820E5460900ADCDB9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		24B18D6B20E5460900ADCDB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24B18D6B20E5460900ADCDB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SuperDB.storyboard; sourceTree = "<group>"; };
 		24B18D6E20E5460900ADCDB9 /* SuperDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuperDB.xcdatamodel; sourceTree = "<group>"; };
 		24B18D7020E5460A00ADCDB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24B18D7320E5460A00ADCDB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,9 +65,11 @@
 			children = (
 				24B18D6420E5460900ADCDB9 /* AppDelegate.h */,
 				24B18D6520E5460900ADCDB9 /* AppDelegate.m */,
+				24233DA520E54B6300618DEE /* HeroListController.h */,
+				24233DA620E54B6300618DEE /* HeroListController.m */,
 				24B18D6720E5460900ADCDB9 /* ViewController.h */,
 				24B18D6820E5460900ADCDB9 /* ViewController.m */,
-				24B18D6A20E5460900ADCDB9 /* Main.storyboard */,
+				24B18D6A20E5460900ADCDB9 /* SuperDB.storyboard */,
 				24B18D7020E5460A00ADCDB9 /* Assets.xcassets */,
 				24B18D7220E5460A00ADCDB9 /* LaunchScreen.storyboard */,
 				24B18D7520E5460A00ADCDB9 /* Info.plist */,
@@ -133,7 +138,7 @@
 			files = (
 				24B18D7420E5460A00ADCDB9 /* LaunchScreen.storyboard in Resources */,
 				24B18D7120E5460A00ADCDB9 /* Assets.xcassets in Resources */,
-				24B18D6C20E5460900ADCDB9 /* Main.storyboard in Resources */,
+				24B18D6C20E5460900ADCDB9 /* SuperDB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +152,7 @@
 				24B18D6F20E5460900ADCDB9 /* SuperDB.xcdatamodeld in Sources */,
 				24B18D6920E5460900ADCDB9 /* ViewController.m in Sources */,
 				24B18D7720E5460A00ADCDB9 /* main.m in Sources */,
+				24233DA720E54B6300618DEE /* HeroListController.m in Sources */,
 				24B18D6620E5460900ADCDB9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,12 +160,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		24B18D6A20E5460900ADCDB9 /* Main.storyboard */ = {
+		24B18D6A20E5460900ADCDB9 /* SuperDB.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				24B18D6B20E5460900ADCDB9 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SuperDB.storyboard;
 			sourceTree = "<group>";
 		};
 		24B18D7220E5460A00ADCDB9 /* LaunchScreen.storyboard */ = {
@@ -290,6 +296,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G42Q9LTDRN;
 				INFOPLIST_FILE = SuperDB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G42Q9LTDRN;
 				INFOPLIST_FILE = SuperDB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
