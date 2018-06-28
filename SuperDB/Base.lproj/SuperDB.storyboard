@@ -34,21 +34,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="auC-8b-jRT">
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auC-8b-jRT">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem title="By Name" image="name_icon" id="MCc-g3-IeP"/>
-                                    <tabBarItem title="By Secred Identity" image="secret_icon" id="PEg-nW-BWU"/>
+                                    <tabBarItem title="By Secret Identity" image="secret_icon" id="PEg-nW-BWU"/>
                                 </items>
                                 <connections>
                                     <outlet property="delegate" destination="oWO-Kd-3V6" id="Oao-Nz-jC8"/>
                                 </connections>
                             </tabBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1gY-wc-Y6L">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1gY-wc-Y6L">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeroListCell" textLabel="mPY-5W-rks" detailTextLabel="yaA-Wk-t1C" style="IBUITableViewCellStyleSubtitle" id="17Y-Yl-PZj">
@@ -83,6 +81,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="auC-8b-jRT" firstAttribute="top" secondItem="1gY-wc-Y6L" secondAttribute="bottom" id="8xJ-WG-cI3"/>
+                            <constraint firstItem="1gY-wc-Y6L" firstAttribute="leading" secondItem="EGO-CP-3DA" secondAttribute="leading" id="EfW-mq-iQy"/>
+                            <constraint firstItem="auC-8b-jRT" firstAttribute="leading" secondItem="EGO-CP-3DA" secondAttribute="leading" id="P1k-OU-4rJ"/>
+                            <constraint firstItem="auC-8b-jRT" firstAttribute="trailing" secondItem="EGO-CP-3DA" secondAttribute="trailing" id="jDm-PC-qM7"/>
+                            <constraint firstItem="auC-8b-jRT" firstAttribute="bottom" secondItem="EGO-CP-3DA" secondAttribute="bottom" id="lJp-SX-2Yy"/>
+                            <constraint firstItem="1gY-wc-Y6L" firstAttribute="top" secondItem="EGO-CP-3DA" secondAttribute="top" id="lVM-Sy-1ph"/>
+                            <constraint firstItem="1gY-wc-Y6L" firstAttribute="trailing" secondItem="EGO-CP-3DA" secondAttribute="trailing" id="xy3-R3-i1o"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EGO-CP-3DA"/>
                     </view>
                     <navigationItem key="navigationItem" id="bhP-I2-BW5">
