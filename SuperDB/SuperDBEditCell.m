@@ -58,4 +58,15 @@
     self.textField.enabled = editing;
 }
 
+#pragma mark - Property Overrides
+
+- (id)value {
+    return self.textField.text;
+}
+
+
+- (void)setValue:(id)value {
+    self.textField.text = value;
+}
+
 @end

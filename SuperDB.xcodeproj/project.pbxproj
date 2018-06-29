@@ -18,6 +18,8 @@
 		47753E8F20E64CEE0058A3E9 /* HeroDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47753E8E20E64CEE0058A3E9 /* HeroDetailController.m */; };
 		47753E9120E64DCE0058A3E9 /* HeroDetailConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47753E9020E64DCE0058A3E9 /* HeroDetailConfiguration.plist */; };
 		47753E9420E662860058A3E9 /* SuperDBEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47753E9320E662860058A3E9 /* SuperDBEditCell.m */; };
+		47753E9720E669EC0058A3E9 /* SuperDBDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47753E9620E669EC0058A3E9 /* SuperDBDateCell.m */; };
+		47753E9A20E6709C0058A3E9 /* SuperDBPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47753E9920E6709C0058A3E9 /* SuperDBPickerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		47753E9020E64DCE0058A3E9 /* HeroDetailConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HeroDetailConfiguration.plist; sourceTree = "<group>"; };
 		47753E9220E662860058A3E9 /* SuperDBEditCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperDBEditCell.h; sourceTree = "<group>"; };
 		47753E9320E662860058A3E9 /* SuperDBEditCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperDBEditCell.m; sourceTree = "<group>"; };
+		47753E9520E669EB0058A3E9 /* SuperDBDateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperDBDateCell.h; sourceTree = "<group>"; };
+		47753E9620E669EC0058A3E9 /* SuperDBDateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperDBDateCell.m; sourceTree = "<group>"; };
+		47753E9820E6709C0058A3E9 /* SuperDBPickerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperDBPickerCell.h; sourceTree = "<group>"; };
+		47753E9920E6709C0058A3E9 /* SuperDBPickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperDBPickerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,10 @@
 				47753E9020E64DCE0058A3E9 /* HeroDetailConfiguration.plist */,
 				47753E9220E662860058A3E9 /* SuperDBEditCell.h */,
 				47753E9320E662860058A3E9 /* SuperDBEditCell.m */,
+				47753E9520E669EB0058A3E9 /* SuperDBDateCell.h */,
+				47753E9620E669EC0058A3E9 /* SuperDBDateCell.m */,
+				47753E9820E6709C0058A3E9 /* SuperDBPickerCell.h */,
+				47753E9920E6709C0058A3E9 /* SuperDBPickerCell.m */,
 			);
 			path = SuperDB;
 			sourceTree = "<group>";
@@ -170,6 +180,8 @@
 				24233DA720E54B6300618DEE /* HeroListController.m in Sources */,
 				24B18D6620E5460900ADCDB9 /* AppDelegate.m in Sources */,
 				47753E9420E662860058A3E9 /* SuperDBEditCell.m in Sources */,
+				47753E9720E669EC0058A3E9 /* SuperDBDateCell.m in Sources */,
+				47753E9A20E6709C0058A3E9 /* SuperDBPickerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

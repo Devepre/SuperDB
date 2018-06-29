@@ -11,6 +11,6 @@
 
 @interface HeroDetailController : UITableViewController
 
-@property (strong, nonatomic) NSManagedObjectContext *hero;
+@property (strong, nonatomic) NSManagedObject *hero;
 
 @end

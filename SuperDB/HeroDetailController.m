@@ -21,7 +21,7 @@
 
 @end
 
-static NSString *cellIdentifier = @"SuperDBEditCell";
+//static NSString *cellIdentifier = @"SuperDBEditCell";
 
 @implementation HeroDetailController
 
@@ -50,7 +50,7 @@ static NSString *cellIdentifier = @"SuperDBEditCell";
     self.sections = [plist valueForKey:@"sections"];
     NSAssert(self.sections != nil, @"Sections shouldn't be nil");
     
-    [self.tableView registerClass:SuperDBEditCell.class forCellReuseIdentifier:cellIdentifier];
+//    [self.tableView registerClass:SuperDBEditCell.class forCellReuseIdentifier:cellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,22 +72,34 @@ static NSString *cellIdentifier = @"SuperDBEditCell";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SuperDBEditCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-
-    if (!cell) {
-        cell = [[SuperDBEditCell alloc]
-                initWithStyle:UITableViewCellStyleValue2
-                reuseIdentifier:cellIdentifier];
-    }
-
     NSInteger sectionIndex = [indexPath section];
     NSInteger rowIndex = [indexPath row];
     
     NSDictionary *section = [self.sections objectAtIndex:sectionIndex];
     NSArray *rows = [section objectForKey:@"rows"];
     NSDictionary *row = [rows objectAtIndex:rowIndex];
+    
+    NSString *cellClassString = [row valueForKey:@"class"];
+
+    SuperDBEditCell *cell = [tableView dequeueReusableCellWithIdentifier:cellClassString];
+    
+    if (!cell) {
+        Class cellClass = NSClassFromString(cellClassString);
+        cell = [[cellClass alloc]
+                initWithStyle:UITableViewCellStyleValue2
+                reuseIdentifier:cellClassString];
+    }
+
+    cell.key = [row objectForKey:@"key"];
+    cell.value = [self.hero valueForKey:cell.key];
     cell.label.text = [row objectForKey:@"label"];
-    cell.textField.text = [self.hero valueForKey:[row objectForKey:@"key"]];
+
+    // For setting Sex possible values
+    NSArray *values = [row valueForKey:@"values"];
+    if (values) {
+        // TODO clean this up - ugh
+        [cell performSelector:@selector(setValues:) withObject:values];
+    }
     
     return cell;
 }
@@ -152,6 +164,19 @@ static NSString *cellIdentifier = @"SuperDBEditCell";
 #pragma mark - (Private) Instance Methods
 
 - (void)save {
+    [self setEditing:NO animated:YES];
+    // TODO Visible cells???
+    for (SuperDBEditCell *cell in [self.tableView visibleCells]) {
+        [self.hero setValue:cell.value
+                     forKey:cell.key];
+    }
+    
+    NSError *error = nil;
+    if (![self.hero.managedObjectContext save:&error]) {
+        NSLog(@"Error saving: %@", error.localizedDescription);
+    }
+    
+    [self.tableView reloadData];
     [self setEditing:NO animated:YES];
 }
 

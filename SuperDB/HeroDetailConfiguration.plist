@@ -10,6 +10,8 @@
 				<dict>
 					<key>key</key>
 					<string>name</string>
+					<key>class</key>
+					<string>SuperDBEditCell</string>
 					<key>label</key>
 					<string>Name</string>
 				</dict>
@@ -19,6 +21,8 @@
 			<key>rows</key>
 			<array>
 				<dict>
+					<key>class</key>
+					<string>SuperDBEditCell</string>
 					<key>key</key>
 					<string>secretIdentity</string>
 					<key>label</key>
@@ -27,14 +31,23 @@
 				<dict>
 					<key>key</key>
 					<string>birthDate</string>
+					<key>class</key>
+					<string>SuperDBDateCell</string>
 					<key>label</key>
 					<string>Birthdate</string>
 				</dict>
 				<dict>
 					<key>key</key>
 					<string>sex</string>
+					<key>class</key>
+					<string>SuperDBPickerCell</string>
 					<key>label</key>
 					<string>Sex</string>
+					<key>values</key>
+					<array>
+						<string>Male</string>
+						<string>Female</string>
+					</array>
 				</dict>
 			</array>
 		</dict>
