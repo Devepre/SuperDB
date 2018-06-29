@@ -15,6 +15,9 @@
 		24B18D7120E5460A00ADCDB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24B18D7020E5460A00ADCDB9 /* Assets.xcassets */; };
 		24B18D7420E5460A00ADCDB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B18D7220E5460A00ADCDB9 /* LaunchScreen.storyboard */; };
 		24B18D7720E5460A00ADCDB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B18D7620E5460A00ADCDB9 /* main.m */; };
+		47753E8F20E64CEE0058A3E9 /* HeroDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47753E8E20E64CEE0058A3E9 /* HeroDetailController.m */; };
+		47753E9120E64DCE0058A3E9 /* HeroDetailConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47753E9020E64DCE0058A3E9 /* HeroDetailConfiguration.plist */; };
+		47753E9420E662860058A3E9 /* SuperDBEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47753E9320E662860058A3E9 /* SuperDBEditCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,11 @@
 		24B18D7320E5460A00ADCDB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24B18D7520E5460A00ADCDB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24B18D7620E5460A00ADCDB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47753E8D20E64CEE0058A3E9 /* HeroDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroDetailController.h; sourceTree = "<group>"; };
+		47753E8E20E64CEE0058A3E9 /* HeroDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroDetailController.m; sourceTree = "<group>"; };
+		47753E9020E64DCE0058A3E9 /* HeroDetailConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HeroDetailConfiguration.plist; sourceTree = "<group>"; };
+		47753E9220E662860058A3E9 /* SuperDBEditCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperDBEditCell.h; sourceTree = "<group>"; };
+		47753E9320E662860058A3E9 /* SuperDBEditCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperDBEditCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,11 @@
 				24B18D7520E5460A00ADCDB9 /* Info.plist */,
 				24B18D7620E5460A00ADCDB9 /* main.m */,
 				24B18D6D20E5460900ADCDB9 /* SuperDB.xcdatamodeld */,
+				47753E8D20E64CEE0058A3E9 /* HeroDetailController.h */,
+				47753E8E20E64CEE0058A3E9 /* HeroDetailController.m */,
+				47753E9020E64DCE0058A3E9 /* HeroDetailConfiguration.plist */,
+				47753E9220E662860058A3E9 /* SuperDBEditCell.h */,
+				47753E9320E662860058A3E9 /* SuperDBEditCell.m */,
 			);
 			path = SuperDB;
 			sourceTree = "<group>";
@@ -136,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47753E9120E64DCE0058A3E9 /* HeroDetailConfiguration.plist in Resources */,
 				24B18D7420E5460A00ADCDB9 /* LaunchScreen.storyboard in Resources */,
 				24B18D7120E5460A00ADCDB9 /* Assets.xcassets in Resources */,
 				24B18D6C20E5460900ADCDB9 /* SuperDB.storyboard in Resources */,
@@ -149,11 +163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47753E8F20E64CEE0058A3E9 /* HeroDetailController.m in Sources */,
 				24B18D6F20E5460900ADCDB9 /* SuperDB.xcdatamodeld in Sources */,
 				24B18D6920E5460900ADCDB9 /* ViewController.m in Sources */,
 				24B18D7720E5460A00ADCDB9 /* main.m in Sources */,
 				24233DA720E54B6300618DEE /* HeroListController.m in Sources */,
 				24B18D6620E5460900ADCDB9 /* AppDelegate.m in Sources */,
+				47753E9420E662860058A3E9 /* SuperDBEditCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

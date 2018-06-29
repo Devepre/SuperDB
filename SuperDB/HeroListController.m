@@ -7,6 +7,7 @@
 //
 
 #import "HeroListController.h"
+#import "HeroDetailController.h"
 
 @interface HeroListController ()
 
@@ -91,6 +92,12 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSManagedObject *selectedHero = [self.fetchResultsController objectAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"HeroDetailSegue"
+                              sender:selectedHero];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -139,23 +146,36 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"HeroDetailSegue"]) {
+        if ([sender isKindOfClass:[NSManagedObject class]]) {
+            HeroDetailController *detailController = segue.destinationViewController;
+            detailController.hero = sender;
+        } else {
+            NSString *message = @"Error trying to show Hero detail";
+            [self showAlert:NSLocalizedString(@"Hero Detail Error", @"Hero Detail Error")
+                    message:NSLocalizedString(message, message)
+                 buttonText:NSLocalizedString(@"Ah, nuts", @"Aw, nuts")
+                    handler:^(UIAlertAction *alert) {
+                        [self dismissButtonOnALertController:alert];
+                    }];
+        }
+    }
 }
-*/
 
 #pragma mark - Actions
 
 - (IBAction)addHero:(UIBarButtonItem *)sender {
     NSManagedObjectContext *managedObjectContext = [self.fetchResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchResultsController fetchRequest] entity];
-    [NSEntityDescription insertNewObjectForEntityForName:entity.name
-                                  inManagedObjectContext:managedObjectContext];
+    NSManagedObjectContext *newHero = [NSEntityDescription
+                                       insertNewObjectForEntityForName:entity.name
+                                       inManagedObjectContext:managedObjectContext];
     NSError *error = nil;
     if (![managedObjectContext save:&error]) {
         NSString *message = [NSString
@@ -168,6 +188,9 @@
                     [self dismissButtonOnALertController:alert];
                 }];
     }
+    
+    [self performSegueWithIdentifier:@"HeroDetailSegue"
+                              sender:newHero];
 }
 
 
